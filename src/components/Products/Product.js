@@ -22,7 +22,7 @@ export default function Product(props) {
 	return (
 		<div className="productsListDiv">
 			<div className="productsHeader">
-				<button className="cartButton" onClick={() => navigateTo(PAGE_CART)}>
+				<button className="gocartButton" onClick={() => navigateTo(PAGE_CART)}>
 					Go to Cart ({getCartTotal()})
 				</button>
 				<button
