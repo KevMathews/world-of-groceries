@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import "reset";
+body {
+  background: url('https://i.imgur.com/iYpRFGX.png')no-repeat;
+  background-size: cover;
+  overflow-x:hidden;
+}
+.pageLayoutDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  // grid-template-columns: 25% 75%;
+  // grid-template-rows: 25% 75%;
+  .headerDiv{
+    
+    grid-row: 1;
+    grid-column: 1/3;
+    height: 20vh;
+    width: 99vw;
+    margin-left: 30%;
+    // margin-top: 50%;
+  }
+  .headerImage {
+    -webkit-filter: drop-shadow(rgb(38, 57, 77) 0px 20px 30px -10px);
+    filter: drop-shadow(rgb(38, 57, 77) 0px 20px 30px -10px);
+    width: 40%;
+    
+  }
+  .shoppingListDiv{
+    background: url('https://i.imgur.com/kSmfr6u.png') no-repeat;
+    background-size: 105%;
+    grid-row: 2;
+    grid-column: 2;
+    height: 74vh;
+    width: 25vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+  }
+  .shoppingListInnerDiv {
+    align-items: center;
+    justify-content: center;
+    margin-top: 22%;
+    margin-left: 27%;
+    font-size: 24px;
+    hr {
+      width: 200px;
+      margin-left: 0%;
+      height: 5px;
+    }
+  }
+  .productsListDiv{
+    // background-color: green;
+    grid-row: 1;
+    grid-column: 2;
+    height: 74vh;
+    width: 74vw;
+    align-items: center;
+    justify-content: center;
+    
+  }
+}
+.strike {
+  text-decoration: line-through;
+}
+.shoppingList{
+  justify-content: center;
+  margin-top: 5%;
+  margin-right: 5%;
+}
+.shoppingListTitle {
+  font-size: 38px;
+}
+.foodPics {
+  max-width: 150px;
+  max-height: 150px;
+}
+.productsBoughtList{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px; 
+}
+.product {
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 22px;
+  background-color: white;
+  border: 5px solid black;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  
+}
+.productsListss{
+  display: flex;
+  margin: 25px; 
+  font-size: 24px;
+}
+.productList {
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 22px;
+  background-color: white;
+  border: 5px solid black;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.productsHeader {
+  margin-left: 2.7%;
+  transform: translateY(60px);
+  background-color: white;
+  width: 350px;
+  font-size: 24px;
+  text-align: center;
+  border: 5px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  }
+.productSelection{
+  margin-left: 2.7%;
+  transform: translateY(60px);
+  background-color: white;
+  width: 350px;
+  font-size: 24px;
+  text-align: center;
+  border-right: 5px solid black;
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+input {
+  width: 88px;
+}
+.totalCost{
+  font-size: 22px;
+}
+.buyButton {
+  border: 1px solid darkgreen;
+  background-color: green;
+  border-radius: 4px;
+  box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen,
+    1px 2px 1px black;
+  -o-box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen,
+    1px 2px 1px black;
+  -webkit-box-shadow: inset 1px 6px 12px lightgreen,
+    inset -1px -10px 5px darkgreen, 1px 2px 1px black;
+  -moz-box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen,
+    1px 2px 1px black;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  padding: 2px 20px;
+  font-size: 16px;
+}
+.buyButton:hover {
+  border: 1px solid rgb(24, 146, 24);
+  background-color: rgb(79, 211, 79);
+}
+.cartButton {
+  border: 1px solid rgb(15, 0, 100);
+  background-color: rgb(0, 98, 128);
+  border-radius: 4px;
+  box-shadow: inset 1px 6px 12px rgb(144, 219, 238),
+    inset -1px -10px 5px rgb(0, 15, 100), 1px 2px 1px black;
+  -o-box-shadow: inset 1px 6px 12px rgb(144, 219, 238),
+    inset -1px -10px 5px rgb(0, 15, 100), 1px 2px 1px black;
+  -webkit-box-shadow: inset 1px 6px 12px rgb(144, 219, 238),
+    inset -1px -10px 5px rgb(0, 15, 100), 1px 2px 1px black;
+  -moz-box-shadow: inset 1px 6px 12px rgb(144, 219, 238),
+    inset -1px -10px 5px rgb(0, 15, 100), 1px 2px 1px black;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  padding: 2px 20px;
+  font-size: 16px;
+}
+.cartButton:hover {
+  border: 1px solid rgb(43, 55, 172);
+  background-color: rgb(55, 196, 206);
+}
+.storeButton {
+  border: 1px solid rgb(119, 102, 3);
+  background-color: rgb(161, 159, 0);
+  border-radius: 4px;
+  box-shadow: inset 1px 6px 12px rgb(238, 236, 144),
+    inset -1px -10px 5px rgb(100, 98, 0), 1px 2px 1px black;
+  -o-box-shadow: inset 1px 6px 12px rgb(238, 236, 144),
+    inset -1px -10px 5px rgb(100, 98, 0), 1px 2px 1px black;
+  -webkit-box-shadow: inset 1px 6px 12px rgb(238, 236, 144),
+    inset -1px -10px 5px rgb(100, 98, 0), 1px 2px 1px black;
+  -moz-box-shadow: inset 1px 6px 12px rgb(238, 236, 144),
+    inset -1px -10px 5px rgb(100, 98, 0), 1px 2px 1px black;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  padding: 2px 20px;
+  font-size: 16px;
+}
+.storeButton:hover {
+  border: 1px solid rgb(223, 190, 4);
+  background-color: rgb(211, 207, 0);
+}
+
+.clearCartButton {
+  border: 1px solid rgb(71, 1, 1);
+  background-color: rgb(245, 0, 0);
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px pink, inset 0 -5px 15px maroon, 0 2px 1px black;
+  -o-box-shadow: inset 0 1px 3px pink, inset 0 -5px 15px maroon, 0 2px 1px black;
+  -webkit-box-shadow: inset 0 1px 3px pink, inset 0 -5px 15px maroon,
+    0 2px 1px black;
+  -moz-box-shadow: inset 0 1px 3px pink, inset 0 -5px 15px maroon,
+    0 2px 1px black;
+  color: white;
+  text-shadow: 0 1px 1px black;
+  padding: 2px 15px;
+  font-size: 16px;
+}
+.clearCartButton:hover {
+  border: 1px solid rgb(206, 0, 0);
+  background-color: rgb(255, 123, 123);
+}
+select {
+  font-size: 20px;
+}
+.totalCost {
+  background-color: white;
+  padding: 20px;
+  border: 5px solid limegreen;
+  font-weight:bold;
+  width: 352px;
+  text-align: center;
+  margin-left: 2.55%;
+  margin-top: 60px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 24px;
+}
+.postFormDiv {
+  font-size: 20px;
+  margin-left: 130px;
+  margin-top: 100px;
+  input {
+    width: 200px;
+  }
+}

@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "task": "Gallon of Milk",
+        "complete": false
+    },
+    {
+        "id": 2,
+        "task": "Chicken Thighs",
+        "complete": false
+    },
+    {
+        "id": 3,
+        "task": "Light Bulbs",
+        "complete": false
+    },
+    {
+        "id": 4,
+        "task": "Coke",
+        "complete": false
+    },
+    {
+        "id": 5,
+        "task": "Bananas",
+        "complete": false
+    },
+    {
+        "id": 6,
+        "task": "Wine",
+        "complete": false
+    },
+    {
+        "id": 7,
+        "task": "Hot Pockets",
+        "complete": false
+    }
+]
