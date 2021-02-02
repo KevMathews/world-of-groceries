@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Products, { products } from './Products';
 import axios from 'axios';
 class PostForm extends Component {
 	constructor(props) {
@@ -16,16 +17,13 @@ class PostForm extends Component {
 	};
 	submitHandler = e => {
 		e.preventDefault();
-		console.log(this.state);
-		axios
-			.post('http://localhost:3000/', this.state)
-			.then(response => {
-				console.log(response);
-			})
-			.catch(error => {
-				console.log(error);
-			});
+
+		// const newItem = this.state;
+		// const theProps = props.products;
+		// console.log(theProps);
+		// theProps.push(newItem);
 	};
+
 	render() {
 		const { category, name, cost, image } = this.state;
 		return (

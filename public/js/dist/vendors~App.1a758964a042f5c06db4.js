@@ -5,7 +5,6 @@
   !*** ./node_modules/axios/index.js ***!
   \*************************************/
 /*! no static exports found */
-/*! exports used: default */
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("module.exports = __webpack_require__(/*! ./lib/axios */ \"./node_modules/axios/lib/axios.js\");\n\n//# sourceURL=webpack:///./node_modules/axios/index.js?");
