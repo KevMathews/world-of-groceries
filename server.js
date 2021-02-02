@@ -1,18 +1,18 @@
 const express = require('express');
 const app = express();
 // const PORT = process.env.PORT || 8000;
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/fruits_api';
-const db = mongoose.connection;
+// const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/fruits_api';
+// const db = mongoose.connection;
 
-mongoose.connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
-db.on('open', () => {
-    console.log('Mongo is Connected');
-});
+// mongoose.connect(MONGODB_URI, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// });
+// db.on('open', () => {
+//     console.log('Mongo is Connected');
+// });
 /* Middleware */
 app.use(express.json());
 if (process.env.NODE_ENV !== 'development'){
