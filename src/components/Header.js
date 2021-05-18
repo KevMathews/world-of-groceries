@@ -1,15 +1,12 @@
 import React from 'react';
-
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 export default function Header() {
 	return (
-		<div className="headerDiv">
-			<div className="logoDiv">
-				<img
-					className="headerImage"
-					id="mainLogo"
-					src="https://i.imgur.com/1Chk6Po.gif"
-				/>
-			</div>
-		</div>
+		<Grid container>
+			<Grid item>
+				<img className="headerImage" id="mainLogo" src="./img/logo2.gif" />;
+			</Grid>
+		</Grid>
 	);
 }
