@@ -19,8 +19,8 @@ export default function App(props) {
 	return (
 		<div className="pageLayoutDiv">
 			<Header />
-			<ShoppingList />
 			<Product />
+			<ShoppingList />
 		</div>
 	);
 }

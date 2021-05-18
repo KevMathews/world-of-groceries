@@ -58,6 +58,7 @@
     "webpack-md5-hash": "0.0.6"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.2"

@@ -20,8 +20,8 @@ export default function Product(props) {
 		setCart([]);
 	};
 	return (
-		<div className="productsListDiv">
-			<div className="productsHeader">
+		<div className="productsListDiv" id="pld">
+			<div className="productsHeader" id="phd">
 				<button className="gocartButton" onClick={() => navigateTo(PAGE_CART)}>
 					Go to Cart ({getCartTotal()})
 				</button>
@@ -35,11 +35,11 @@ export default function Product(props) {
 					Clear Cart
 				</button>
 				<button className="cartButton" onClick={() => navigateTo(PAGE_ADD)}>
-					AddItem
+					Add Item
 				</button>
 			</div>
 
-			<div className="productsListingsDiv">
+			<div className="productsListingsDiv" id="plsd">
 				{page === PAGE_PRODUCTS && <Products cart={cart} setCart={setCart} />}
 				{page === PAGE_CART && <Cart cart={cart} setCart={setCart} />}
 				{page === PAGE_ADD && <PostForm cart={cart} setCart={setCart} />}

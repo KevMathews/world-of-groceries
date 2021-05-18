@@ -307,22 +307,32 @@ export default function Products({ setCart, cart }) {
 	return (
 		<>
 			<div className="productSelection">
-				<h1>Products</h1>
-				Select a category
+				{/* <h1>Products</h1> */}
+				Select a category&nbsp;&nbsp;
 				<select onChange={e => setCategory(e.target.value)}>
 					{/* <option value={HOME_GARDEN}>{HOME_GARDEN}</option> */}
-					<option value={FRUITSVEGGIES}>{FRUITSVEGGIES}</option>
-					<option value={DAIRY}>{DAIRY}</option>
-					<option value={MEAT}>{MEAT}</option>
-					<option value={CANNEDGOODS}>{CANNEDGOODS}</option>
-					<option value={FROZENFOODS}>{FROZENFOODS}</option>
-					<option value={BEVERAGES}>{BEVERAGES}</option>
+					<option id="selVal" value={FRUITSVEGGIES}>
+						{FRUITSVEGGIES}
+					</option>
+					<option id="selVal" value={DAIRY}>
+						{DAIRY}
+					</option>
+					<option id="selVal" value={MEAT}>
+						{MEAT}
+					</option>
+					<option id="selVal" value={CANNEDGOODS}>
+						{CANNEDGOODS}
+					</option>
+					<option id="selVal" value={FROZENFOODS}>
+						{FROZENFOODS}
+					</option>
+					<option id="selVal" value={BEVERAGES}>
+						{BEVERAGES}
+					</option>
 				</select>
 			</div>
-			<br />
-			<br />
-			<br />
-			<div className="productsListss">
+
+			<div className="productsCompleteList">
 				{getProductsInCategory().map((product, idx) => (
 					<div className="product" key={idx}>
 						<h3>{product.name}</h3>

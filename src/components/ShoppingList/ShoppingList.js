@@ -32,7 +32,8 @@ export default function ShoppingList() {
 	};
 
 	return (
-		<div className="shoppingListDiv">
+		<div className="shoppingListDiv" id="sld">
+			<img className="phone" src="./img/tablet.png"></img>
 			<div className="shoppingListInnerDiv">
 				<h1 className="shoppingListTitle">Shopping List</h1>
 				<hr />

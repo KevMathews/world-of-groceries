@@ -11,14 +11,16 @@ export default function ShoppingToDoForm({ addTask }) {
 		setUserInput('');
 	};
 	return (
-		<form onSubmit={handleSubmit}>
-			<input
-				value={userInput}
-				type="text"
-				onChange={handleChange}
-				placeholder="Enter Groceries..."
-			/>
-			<button>Submit</button>
-		</form>
+		<div className="submitForm">
+			<form onSubmit={handleSubmit}>
+				<input
+					value={userInput}
+					type="text"
+					onChange={handleChange}
+					placeholder="Enter Groceries..."
+				/>
+				<button>Submit</button>
+			</form>
+		</div>
 	);
 }
