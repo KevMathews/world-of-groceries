@@ -440,7 +440,10 @@ export default function Products({ setCart, cart }) {
 							<Button
 								size="small"
 								startIcon={
-									<RemoveShoppingCartIcon style={{ marginRight: -14 }} />
+									<RemoveShoppingCartIcon
+										style={{ marginRight: -14 }}
+										elevation={8}
+									/>
 								}
 								variant="contained"
 								style={{ backgroundColor: 'red', color: '#FFFFFF' }}

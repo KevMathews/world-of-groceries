@@ -37,23 +37,27 @@ export default function Product(props) {
 				spacing={2}
 			>
 				<Grid item>
-					<Button
-						onClick={() => navigateTo(PAGE_PRODUCTS)}
-						endIcon={<StoreIcon style={{ marginRight: 14 }} />}
-						variant="contained"
-						color="primary"
-					></Button>
+					<Box boxShadow={8}>
+						<Button
+							onClick={() => navigateTo(PAGE_PRODUCTS)}
+							endIcon={<StoreIcon style={{ marginRight: 14 }} />}
+							variant="contained"
+							color="primary"
+						></Button>
+					</Box>
 				</Grid>
 				<Grid item>
-					<Button
-						onClick={() => navigateTo(PAGE_CART)}
-						startIcon={<ShoppingCartIcon elevation={8} />}
-						variant="contained"
-						size="small"
-						color="primary"
-					>
-						({getCartTotal()})
-					</Button>
+					<Box boxShadow={8}>
+						<Button
+							onClick={() => navigateTo(PAGE_CART)}
+							startIcon={<ShoppingCartIcon elevation={8} />}
+							variant="contained"
+							size="small"
+							color="primary"
+						>
+							({getCartTotal()})
+						</Button>
+					</Box>
 				</Grid>
 
 				<Grid item>
@@ -62,20 +66,11 @@ export default function Product(props) {
 						startIcon={<RemoveShoppingCartIcon style={{ marginRight: -14 }} />}
 						variant="contained"
 						color="secondary"
-					>
-						{/* Clear */}
-					</Button>
+					></Button>
 				</Grid>
 			</Grid>
 
-			<Grid
-				container
-				direction="row"
-				justify="center"
-				alignItems="center"
-				// spacing={12}
-				item
-			>
+			<Grid container direction="row" justify="center" alignItems="center" item>
 				<Grid xs={12} item>
 					{page === PAGE_PRODUCTS && <Products cart={cart} setCart={setCart} />}
 					{page === PAGE_CART && <Cart cart={cart} setCart={setCart} />}

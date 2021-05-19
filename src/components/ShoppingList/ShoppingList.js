@@ -38,7 +38,8 @@ const useStyles = makeStyles({
 	},
 	title: {
 		fontSize: 19,
-		color: 'white'
+		color: 'white',
+		marginBottom: -27
 	},
 	pos: {
 		marginBottom: 12
@@ -77,34 +78,7 @@ export default function ShoppingList() {
 
 	return (
 		<>
-			<Card className={classes.root} elevation={8}>
-				<Box boxShadow={8}>
-					<CardHeader
-						className={classes.title}
-						style={{ backgroundColor: 'blue' }}
-						title="Shopping List"
-						color="white"
-						elevation={8}
-					></CardHeader>
-				</Box>
-				<CardContent>
-					<Typography
-						className={classes.pos}
-						color="textSecondary"
-					></Typography>
-					<Typography variant="body2" component="p">
-						<ShoppingToDoList
-							toDoList={toDoList}
-							handleToggle={handleToggle}
-							handleFilter={handleFilter}
-						/>
-					</Typography>
-				</CardContent>
-				<CardActions>
-					<ShoppingToDoForm addTask={addTask} />
-				</CardActions>
-			</Card>
-			{/* <Box mb={-4} pb={-2}>
+			<Box pr={-10}>
 				<Grid
 					container
 					direction="row"
@@ -113,15 +87,37 @@ export default function ShoppingList() {
 					ma
 					spacing={0}
 				>
-					<Grid xs={12} sm={12} md={12} lg={12} item>
-						<Typography
-							gutterBottom
-							className={classes.shoppingArea}
-						></Typography>
-
-					</Grid>
+					<Card className={classes.root} elevation={8}>
+						<Box boxShadow={32}>
+							<CardHeader
+								className={classes.title}
+								style={{ backgroundColor: 'blue' }}
+								title="Shopping List"
+								color="white"
+								elevation={8}
+							></CardHeader>
+						</Box>
+						<CardContent>
+							<Typography
+								className={classes.pos}
+								color="textSecondary"
+							></Typography>
+							<Typography variant="body2" component="p" align="center">
+								<Grid item>
+									<ShoppingToDoList
+										toDoList={toDoList}
+										handleToggle={handleToggle}
+										handleFilter={handleFilter}
+									/>
+								</Grid>
+							</Typography>
+						</CardContent>
+						<CardActions>
+							<ShoppingToDoForm addTask={addTask} />
+						</CardActions>
+					</Card>
 				</Grid>
-			</Box> */}
+			</Box>
 		</>
 	);
 }

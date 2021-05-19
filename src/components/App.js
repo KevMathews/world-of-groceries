@@ -28,7 +28,7 @@ export default function App(props) {
 			alignItems="center"
 			spacing={1}
 		>
-			<Grid xs={12} md={12} lg={12} item>
+			<Grid xs={11} md={12} lg={12} item>
 				<Header />
 			</Grid>
 			<Box mt={-1}>

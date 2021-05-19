@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import Input from '@material-ui/core/Input';
+import Button from '@material-ui/core/Button';
 export default function ShoppingToDoForm({ addTask }) {
 	const [userInput, setUserInput] = useState('');
 	const handleChange = e => {
@@ -19,15 +22,25 @@ export default function ShoppingToDoForm({ addTask }) {
 			spacing={0}
 			item
 		>
-			<Grid xs={12} sm={12} md={12} lg={12} item>
+			<Grid xs={7} sm={7} md={7} lg={7} item>
 				<form onSubmit={handleSubmit}>
-					<input
+					<Input
 						value={userInput}
 						type="text"
 						onChange={handleChange}
 						placeholder="Enter Groceries..."
 					/>
-					<button>Submit</button>
+					<Button
+						value={userInput}
+						type="text"
+						onChange={handleChange}
+						placeholder="Enter Groceries..."
+						variant="contained"
+						size="small"
+						color="primary"
+					>
+						Submit
+					</Button>
 				</form>
 			</Grid>
 		</Grid>
