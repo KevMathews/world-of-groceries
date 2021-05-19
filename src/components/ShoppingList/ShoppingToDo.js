@@ -9,7 +9,7 @@ export default function ShoppingToDo({ todo, handleToggle }) {
 	return (
 		<div
 			id={todo.id}
-			key={todo.id + todo.task}
+			key={todo.id}
 			name="todo"
 			value={todo.id}
 			onClick={handleClick}

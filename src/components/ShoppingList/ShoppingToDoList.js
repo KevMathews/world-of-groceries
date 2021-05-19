@@ -24,6 +24,7 @@ export default function ShoppingToDoList({
 						<>
 							<Grid xs={3} sm={3} md={3} lg={3} item className="groceryList">
 								<ShoppingToDo
+									key={todo.id}
 									todo={todo}
 									handleToggle={handleToggle}
 									handleFilter={handleFilter}

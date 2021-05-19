@@ -59,7 +59,6 @@ export default function Product(props) {
 						</Button>
 					</Box>
 				</Grid>
-
 				<Grid item>
 					<Box boxShadow={8}>
 						<Button

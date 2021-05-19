@@ -45,31 +45,36 @@ export default function Products({ setCart, cart }) {
 			category: FRUITSVEGGIES,
 			name: 'Banana',
 			cost: 0.39,
-			image: 'https://i.imgur.com/jJTK0bS.jpg'
+			image: 'https://i.imgur.com/jJTK0bS.jpg',
+			id: 1.1
 		},
 		{
 			category: FRUITSVEGGIES,
 			name: 'Strawberries',
 			cost: 3.99,
-			image: 'https://i.imgur.com/XoAHviU.jpg'
+			image: 'https://i.imgur.com/XoAHviU.jpg',
+			id: 1.2
 		},
 		{
 			category: FRUITSVEGGIES,
 			name: 'Pineapple',
 			cost: 0.39,
-			image: 'https://i.imgur.com/iILIsdp.jpg'
+			image: 'https://i.imgur.com/iILIsdp.jpg',
+			id: 1.3
 		},
 		{
 			category: FRUITSVEGGIES,
 			name: 'Bell Pepper',
 			cost: 0.79,
-			image: 'https://i.imgur.com/0LusTr7.jpg'
+			image: 'https://i.imgur.com/0LusTr7.jpg',
+			id: 1.4
 		},
 		{
 			category: FRUITSVEGGIES,
 			name: 'Avocado',
 			cost: 0.99,
-			image: 'https://i.imgur.com/s5Jl7ZJ.jpg'
+			image: 'https://i.imgur.com/s5Jl7ZJ.jpg',
+			id: 1.5
 		},
 		{
 			category: MEAT,
@@ -79,7 +84,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 3.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/uN8Bz9P.jpg'
+			image: 'https://i.imgur.com/uN8Bz9P.jpg',
+			id: 2.1
 		},
 		{
 			category: MEAT,
@@ -89,7 +95,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 5.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/ZNYARmN.jpg'
+			image: 'https://i.imgur.com/ZNYARmN.jpg',
+			id: 2.2
 		},
 		{
 			category: MEAT,
@@ -99,7 +106,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 6.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/Cnj0W7a.jpg'
+			image: 'https://i.imgur.com/Cnj0W7a.jpg',
+			id: 2.3
 		},
 		{
 			category: MEAT,
@@ -109,7 +117,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 3.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/qYQ6n65.jpg'
+			image: 'https://i.imgur.com/qYQ6n65.jpg',
+			id: 2.4
 		},
 		{
 			category: MEAT,
@@ -119,7 +128,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 21.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/WD6jQec.jpg'
+			image: 'https://i.imgur.com/WD6jQec.jpg',
+			id: 2.5
 		},
 		{
 			category: CANNEDGOODS,
@@ -129,7 +139,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 1.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/mjxOSbh.jpg'
+			image: 'https://i.imgur.com/mjxOSbh.jpg',
+			id: 3.1
 		},
 		{
 			category: CANNEDGOODS,
@@ -139,7 +150,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 2.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/mrrKwFg.jpg'
+			image: 'https://i.imgur.com/mrrKwFg.jpg',
+			id: 3.2
 		},
 		{
 			category: CANNEDGOODS,
@@ -149,7 +161,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 2.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/0vWvtIk.jpg'
+			image: 'https://i.imgur.com/0vWvtIk.jpg',
+			id: 3.3
 		},
 		{
 			category: CANNEDGOODS,
@@ -159,7 +172,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 1.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/EIEdnjd.png'
+			image: 'https://i.imgur.com/EIEdnjd.png',
+			id: 3.4
 		},
 		{
 			category: CANNEDGOODS,
@@ -169,7 +183,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 1.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/aKK2IB4.jpg'
+			image: 'https://i.imgur.com/aKK2IB4.jpg',
+			id: 3.5
 		},
 		{
 			category: FROZENFOODS,
@@ -179,7 +194,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 8.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/9qiHoIh.jpg'
+			image: 'https://i.imgur.com/9qiHoIh.jpg',
+			id: 4.1
 		},
 		{
 			category: FROZENFOODS,
@@ -189,7 +205,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 6.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/VT5I78i.jpg'
+			image: 'https://i.imgur.com/VT5I78i.jpg',
+			id: 4.2
 		},
 		{
 			category: FROZENFOODS,
@@ -199,7 +216,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 3.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/53RMfnm.jpg'
+			image: 'https://i.imgur.com/53RMfnm.jpg',
+			id: 4.3
 		},
 		{
 			category: FROZENFOODS,
@@ -209,7 +227,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 4.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/VelLDBY.jpg'
+			image: 'https://i.imgur.com/VelLDBY.jpg',
+			id: 4.4
 		},
 		{
 			category: FROZENFOODS,
@@ -219,7 +238,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 3.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/XG6BPG8.jpg'
+			image: 'https://i.imgur.com/XG6BPG8.jpg',
+			id: 4.5
 		},
 		{
 			category: DAIRY,
@@ -229,7 +249,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 3.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/Jah0pQA.jpg'
+			image: 'https://i.imgur.com/Jah0pQA.jpg',
+			id: 5.1
 		},
 		{
 			category: DAIRY,
@@ -239,7 +260,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 2.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/KTYjv1N.jpg'
+			image: 'https://i.imgur.com/KTYjv1N.jpg',
+			id: 5.2
 		},
 		{
 			category: DAIRY,
@@ -249,7 +271,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 2.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/SBoerDZ.jpg'
+			image: 'https://i.imgur.com/SBoerDZ.jpg',
+			id: 5.3
 		},
 		{
 			category: DAIRY,
@@ -259,7 +282,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 3.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/D8lLO4z.jpg'
+			image: 'https://i.imgur.com/D8lLO4z.jpg',
+			id: 5.4
 		},
 		{
 			category: BEVERAGES,
@@ -269,7 +293,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 10.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/hXgOaZb.jpg'
+			image: 'https://i.imgur.com/hXgOaZb.jpg',
+			id: 6.1
 		},
 		{
 			category: BEVERAGES,
@@ -279,7 +304,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 9.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/c4R6ouY.jpg'
+			image: 'https://i.imgur.com/c4R6ouY.jpg',
+			id: 6.2
 		},
 		{
 			category: BEVERAGES,
@@ -289,7 +315,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 4.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/4UBfRDf.jpg'
+			image: 'https://i.imgur.com/4UBfRDf.jpg',
+			id: 6.3
 		},
 		{
 			category: BEVERAGES,
@@ -299,7 +326,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 4.59,
 			isPurchased: false,
-			image: 'https://i.imgur.com/imXSGFx.jpg'
+			image: 'https://i.imgur.com/imXSGFx.jpg',
+			id: 6.4
 		},
 		{
 			category: BEVERAGES,
@@ -309,7 +337,8 @@ export default function Products({ setCart, cart }) {
 			instock: 30,
 			cost: 8.99,
 			isPurchased: false,
-			image: 'https://i.imgur.com/uqBAixr.jpg'
+			image: 'https://i.imgur.com/uqBAixr.jpg',
+			id: 6.5
 		}
 	]);
 
@@ -330,10 +359,33 @@ export default function Products({ setCart, cart }) {
 		setCart(newCart);
 	};
 
+	// const removeFromCart = product => {
+	// 	// let newCart = [...cart];
+	// 	// let itemInCart = newCart.indexOf(product);
+	// 	// if (pr)
+	// 	console.log(product);
+	// 	console.log(newCart);
+	// 	console.log(itemInCart);
+	// 	let newCart = [...cart];
+	// 	let itemInCart = newCart.find(item => product.name === item.name);
+	// 	console.log(cart);
+	// 	if (itemInCart.quantity > 0) {
+	// 		itemInCart.quantity--;
+	// 		product.instock--;
+	// 	} else if (!itemInCart) {
+	// 		itemInCart = {
+	// 			...product
+	// 		};
+	// 		newCart.push(itemInCart);
+	// 		product.quantity--;
+	// 	}
+	// 	setCart(newCart);
+	// };
+
 	const removeFromCart = product => {
 		let newCart = [...cart];
 		let itemInCart = newCart.find(item => product.name === item.name);
-		if (itemInCart) {
+		if (itemInCart.quantity >= 1) {
 			itemInCart.quantity--;
 			product.instock--;
 		} else if (!itemInCart) {
@@ -422,8 +474,8 @@ export default function Products({ setCart, cart }) {
 					spacing={2}
 					item
 				>
-					{getProductsInCategory().map((product, cost) => (
-						<Grid item key={cost} className="product">
+					{getProductsInCategory().map((product, id) => (
+						<Grid item key={id} className="product">
 							<Typography variant="subtitle1" justify="center">
 								{product.name}
 							</Typography>

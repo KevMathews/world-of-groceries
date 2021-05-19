@@ -67,7 +67,9 @@ export default function Cart({ cart, setCart }) {
 								className="inputValue"
 								value={product.quantity}
 								helperText="Set Quantity"
-								onChange={e => setQuantity(product, parseInt(e.target.value))}
+								onChange={e =>
+									setQuantity(product, parseInt(e.target.value || 0))
+								}
 							/>
 							<button onClick={() => removeFromCart(product)}>Remove</button>
 							{/* </div> */}
