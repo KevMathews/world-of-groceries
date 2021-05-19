@@ -61,12 +61,16 @@ export default function Product(props) {
 				</Grid>
 
 				<Grid item>
-					<Button
-						onClick={clearCart}
-						startIcon={<RemoveShoppingCartIcon style={{ marginRight: -14 }} />}
-						variant="contained"
-						color="secondary"
-					></Button>
+					<Box boxShadow={8}>
+						<Button
+							onClick={clearCart}
+							startIcon={
+								<RemoveShoppingCartIcon style={{ marginRight: -14 }} />
+							}
+							variant="contained"
+							color="secondary"
+						></Button>
+					</Box>
 				</Grid>
 			</Grid>
 

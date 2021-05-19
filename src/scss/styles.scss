@@ -1074,10 +1074,10 @@ hr {
 .groceryList:hover {
   transform: scale(1.1); 
 }
-.addButton, .minusButton {
+.addButton, .minusButton, .submitButton {
   transition: all .2s ease-in-out;
 }
-.addButton:hover, .minusButton:hover {
+.addButton:hover, .minusButton:hover, .submitButton:hover {
 transform: scale(1.12); 
 }
 .groceryList2 {

@@ -36,7 +36,7 @@ export default function App(props) {
 					<Product />
 				</Grid>
 			</Box>
-			<Grid xs={12} md={12} lg={12} item>
+			<Grid xs={11} sm={11} md={11} lg={12} item>
 				<ShoppingList />
 			</Grid>
 		</Grid>

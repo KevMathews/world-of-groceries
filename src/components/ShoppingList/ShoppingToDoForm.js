@@ -38,6 +38,7 @@ export default function ShoppingToDoForm({ addTask }) {
 						variant="contained"
 						size="small"
 						color="primary"
+						className="submitButton"
 					>
 						Submit
 					</Button>
