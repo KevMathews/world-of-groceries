@@ -24,6 +24,7 @@ export default function Product(props) {
 	const getCartTotal = () => {
 		return cart.reduce((sum, { quantity }) => sum + quantity, 0);
 	};
+
 	const clearCart = () => {
 		setCart([]);
 	};

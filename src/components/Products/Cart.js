@@ -1,14 +1,24 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
 import Input from '@material-ui/core/Input';
 import Typography from '@material-ui/core/Typography';
 
 export default function Cart({ cart, setCart }) {
 	const getTotalSum = () => {
-		return cart.reduce((sum, { cost, quantity }) => sum + cost * quantity, 0);
+		let total = cart.reduce(
+			(sum, { cost, quantity }) => sum + cost * quantity,
+			0
+		);
+		total = total.toFixed(2);
+		return total;
 	};
+	// const getCartTotal = () => {
+	// let total = cart.reduce((sum, { quantity }) => sum + quantity, 0);
+
+	// };
+	// };
+
 	const clearCart = () => {
 		setCart([]);
 	};
@@ -45,18 +55,14 @@ export default function Cart({ cart, setCart }) {
 					alignItems="center"
 					spacing={1}
 				>
-					{/* <div className="productsBoughtList"> */}
 					{cart.map((product, idx) => (
 						<Grid item key={idx} className="product">
-							{/* <div className="productList" key={idx}> */}
 							<Typography variant="subtitle1" justify="center">
 								{product.name}
 							</Typography>
-							{/* <h3></h3> */}
 							<Typography variant="body2" justify="center">
 								${product.cost}
 							</Typography>
-							{/* <h4></h4> */}
 							<img
 								className="foodPics"
 								src={product.image}
@@ -72,10 +78,8 @@ export default function Cart({ cart, setCart }) {
 								}
 							/>
 							<button onClick={() => removeFromCart(product)}>Remove</button>
-							{/* </div> */}
 						</Grid>
 					))}
-					{/* </div> */}
 				</Grid>
 			</Box>
 		</>
