@@ -1,5 +1,17 @@
 import React, { useState } from 'react';
+import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
 import PostForm from '../PostForm';
+import Container from '@material-ui/core/Container';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { green, blue } from '@material-ui/core/colors';
+import InputLabel from '@material-ui/core/InputLabel';
+import NativeSelect from '@material-ui/core/NativeSelect';
+import FormControl from '@material-ui/core/FormControl';
 const HOME_GARDEN = 'Home and Garden';
 const DAIRY = 'Dairy';
 const MEAT = 'Meat';
@@ -8,7 +20,26 @@ const CANNEDGOODS = 'Canned Goods';
 const FROZENFOODS = 'Frozen Foods';
 const BEVERAGES = 'Beverages';
 
+const useStyles = makeStyles(theme => ({
+	formControl: {
+		margin: theme.spacing(1),
+		minWidth: 120,
+		maxWidth: 300
+	},
+	chips: {
+		display: 'flex',
+		flexWrap: 'wrap'
+	},
+	chip: {
+		margin: 2
+	},
+	noLabel: {
+		marginTop: theme.spacing(3)
+	}
+}));
+
 export default function Products({ setCart, cart }) {
+	const classes = useStyles();
 	const [products] = useState([
 		{
 			category: FRUITSVEGGIES,
@@ -172,7 +203,7 @@ export default function Products({ setCart, cart }) {
 		},
 		{
 			category: FROZENFOODS,
-			name: 'Cauliflower MAc',
+			name: 'Cauliflower Mac',
 			brand: 'Tyson',
 			units: '16 oz',
 			instock: 30,
@@ -299,6 +330,22 @@ export default function Products({ setCart, cart }) {
 		setCart(newCart);
 	};
 
+	const removeFromCart = product => {
+		let newCart = [...cart];
+		let itemInCart = newCart.find(item => product.name === item.name);
+		if (itemInCart) {
+			itemInCart.quantity--;
+			product.instock--;
+		} else if (!itemInCart) {
+			itemInCart = {
+				...product
+			};
+			newCart.push(itemInCart);
+			// product.quantity--;
+		}
+		setCart(newCart);
+	};
+
 	const [category, setCategory] = useState(FRUITSVEGGIES);
 	const getProductsInCategory = () => {
 		return products.filter(product => product.category === category);
@@ -306,45 +353,112 @@ export default function Products({ setCart, cart }) {
 
 	return (
 		<>
-			<div className="productSelection">
-				{/* <h1>Products</h1> */}
-				Select a category&nbsp;&nbsp;
-				<select onChange={e => setCategory(e.target.value)}>
-					{/* <option value={HOME_GARDEN}>{HOME_GARDEN}</option> */}
-					<option id="selVal" value={FRUITSVEGGIES}>
-						{FRUITSVEGGIES}
-					</option>
-					<option id="selVal" value={DAIRY}>
-						{DAIRY}
-					</option>
-					<option id="selVal" value={MEAT}>
-						{MEAT}
-					</option>
-					<option id="selVal" value={CANNEDGOODS}>
-						{CANNEDGOODS}
-					</option>
-					<option id="selVal" value={FROZENFOODS}>
-						{FROZENFOODS}
-					</option>
-					<option id="selVal" value={BEVERAGES}>
-						{BEVERAGES}
-					</option>
-				</select>
-			</div>
+			<Box mt={1}>
+				<Grid
+					container
+					direction="column"
+					justify="center"
+					alignItems="center"
+					spacing={0}
+				>
+					<Grid item xs={9} sm={9}>
+						{/* Select a category:
+						<select onChange={e => setCategory(e.target.value)}>
+							<option id="selVal" value={FRUITSVEGGIES}>
+								{FRUITSVEGGIES}
+							</option>
+							<option id="selVal" value={DAIRY}>
+								{DAIRY}
+							</option>
+							<option id="selVal" value={MEAT}>
+								{MEAT}
+							</option>
+							<option id="selVal" value={CANNEDGOODS}>
+								{CANNEDGOODS}
+							</option>
+							<option id="selVal" value={FROZENFOODS}>
+								{FROZENFOODS}
+							</option>
+							<option id="selVal" value={BEVERAGES}>
+								{BEVERAGES}
+							</option>
+						</select> */}
+						<FormControl className={classes.formControl}>
+							<InputLabel htmlFor="select">Select a category:</InputLabel>
+							{/* Select a category&nbsp;&nbsp; */}
+							<NativeSelect
+								id="select"
+								onChange={e => setCategory(e.target.value)}
+							>
+								<option id="selVal" value={FRUITSVEGGIES}>
+									{FRUITSVEGGIES}
+								</option>
+								<option id="selVal" value={DAIRY}>
+									{DAIRY}
+								</option>
+								<option id="selVal" value={MEAT}>
+									{MEAT}
+								</option>
+								<option id="selVal" value={CANNEDGOODS}>
+									{CANNEDGOODS}
+								</option>
+								<option id="selVal" value={FROZENFOODS}>
+									{FROZENFOODS}
+								</option>
+								<option id="selVal" value={BEVERAGES}>
+									{BEVERAGES}
+								</option>
+							</NativeSelect>
+						</FormControl>
+					</Grid>
+				</Grid>
+			</Box>
+			<Box mt={3}>
+				<Grid
+					container
+					direction="row"
+					justify="center"
+					alignItems="center"
+					spacing={2}
+					item
+				>
+					{getProductsInCategory().map((product, cost) => (
+						<Grid item key={cost} className="product">
+							<Typography variant="subtitle1" justify="center">
+								{product.name}
+							</Typography>
+							<Typography variant="body2">${product.cost}</Typography>
+							<h3></h3>
+							<h4></h4>
+							<img
+								className="foodPics"
+								src={product.image}
+								alt={product.name}
+							/>
+							<br />
 
-			<div className="productsCompleteList">
-				{getProductsInCategory().map((product, idx) => (
-					<div className="product" key={idx}>
-						<h3>{product.name}</h3>
-						<h4>${product.cost}</h4>
-						<img className="foodPics" src={product.image} alt={product.name} />
-						<br />
-						<button className="buyButton" onClick={() => addToCart(product)}>
-							Add to Cart
-						</button>
-					</div>
-				))}
-			</div>
+							<Button
+								size="small"
+								startIcon={
+									<RemoveShoppingCartIcon style={{ marginRight: -14 }} />
+								}
+								variant="contained"
+								style={{ backgroundColor: 'red', color: '#FFFFFF' }}
+								onClick={() => removeFromCart(product)}
+								className="minusButton"
+							></Button>
+							<Button
+								size="small"
+								startIcon={<AddShoppingCartIcon style={{ marginRight: -14 }} />}
+								variant="contained"
+								style={{ backgroundColor: '#12824C', color: '#FFFFFF' }}
+								onClick={() => addToCart(product)}
+								className="addButton"
+							></Button>
+						</Grid>
+					))}
+				</Grid>
+			</Box>
 		</>
 	);
 }

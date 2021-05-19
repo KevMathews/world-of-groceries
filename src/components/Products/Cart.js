@@ -1,4 +1,9 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Input from '@material-ui/core/Input';
+import Typography from '@material-ui/core/Typography';
 
 export default function Cart({ cart, setCart }) {
 	const getTotalSum = () => {
@@ -18,22 +23,59 @@ export default function Cart({ cart, setCart }) {
 
 	return (
 		<>
-			<div className="totalCost">Total Cost: ${getTotalSum()}</div>
-			<div className="productsBoughtList">
-				{cart.map((product, idx) => (
-					<div className="productList" key={idx}>
-						<h3>{product.name}</h3>
-						<h4>${product.cost}</h4>
-						<img className="foodPics" src={product.image} alt={product.name} />
-						<br />
-						<input
-							value={product.quantity}
-							onChange={e => setQuantity(product, parseInt(e.target.value))}
-						/>
-						<button onClick={() => removeFromCart(product)}>Remove</button>
-					</div>
-				))}
-			</div>
+			<Box mt={2}>
+				<Grid
+					container
+					direction="row"
+					justify="center"
+					alignItems="center"
+					spacing={1}
+				>
+					<Grid item>
+						<Typography variant="h6">Total Cost: ${getTotalSum()}</Typography>
+						<div className="totalCost"></div>
+					</Grid>
+				</Grid>
+			</Box>
+			<Box mt={3}>
+				<Grid
+					container
+					direction="row"
+					justify="center"
+					alignItems="center"
+					spacing={1}
+				>
+					{/* <div className="productsBoughtList"> */}
+					{cart.map((product, idx) => (
+						<Grid item key={idx} className="product">
+							{/* <div className="productList" key={idx}> */}
+							<Typography variant="subtitle1" justify="center">
+								{product.name}
+							</Typography>
+							{/* <h3></h3> */}
+							<Typography variant="body2" justify="center">
+								${product.cost}
+							</Typography>
+							{/* <h4></h4> */}
+							<img
+								className="foodPics"
+								src={product.image}
+								alt={product.name}
+							/>
+							<br />
+							<Input
+								className="inputValue"
+								value={product.quantity}
+								helperText="Set Quantity"
+								onChange={e => setQuantity(product, parseInt(e.target.value))}
+							/>
+							<button onClick={() => removeFromCart(product)}>Remove</button>
+							{/* </div> */}
+						</Grid>
+					))}
+					{/* </div> */}
+				</Grid>
+			</Box>
 		</>
 	);
 }

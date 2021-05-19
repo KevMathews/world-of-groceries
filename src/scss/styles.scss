@@ -1,11 +1,12 @@
-// @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
-// @import "reset";
-// body {
-//   background: url('https://i.imgur.com/iYpRFGX.png')no-repeat;
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import "reset";
+body {
+  background-color: lightgray;
+  background: url('https://i.imgur.com/iYpRFGX.png')no-repeat;
  
-//   background-size: cover;
-//   // overflow-x:hidden;
-// }
+  background-size: cover;
+  // overflow-x:hidden;
+}
 // // .pageLayoutDiv {
 // //   display: flex;
 // //   flex-wrap: wrap;
@@ -976,13 +977,6 @@
   
 
 // }
-.logoDiv {
-  // max-width:auto;
-  // height:auto;
-  // max-height:80%;
-  // max-width: 100%;
-  background: url('./img/logo2.gif');
-}
 
 
 // .shoppingListInnerDiv {
@@ -1017,4 +1011,71 @@
 #mainLogo {
   max-width: 99%;
   max-height: 99%;
+  filter: drop-shadow(0px 5px 5px rgba(0,0,0,1));
+}
+#phone {
+  max-width: 99%;
+  max-height: 99%;
+}
+.product, .productList {
+  width: 155px;
+  max-width: 155px;
+  height: 195px;
+  max-height: 195px;
+  text-align: center;
+  // font-size: 12px;
+  background-color: white;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 10px;
+  transition: all .2s ease-in-out; 
+}
+.product:hover {
+  transform: scale(1.1); 
+}
+.foodPics {
+  max-width: 80px;
+  max-height: 80px;
+}
+// .productList {
+//   flex-wrap: wrap;
+//   text-align: center;
+//   font-size: 22px;
+//   background-color: white;
+//   border: 5px solid black;
+//   margin: 10px;
+//   padding: 10px;
+//   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+// }
+.MuiGrid-spacing-xs-1 > .MuiGrid-item {
+  padding: 4px;
+  margin: 6px;
+}
+.MuiGrid-spacing-xs-2 > .MuiGrid-item {
+  padding: 16px;
+  margin: 6px;
+}
+.strike {
+  text-decoration: line-through;
+}
+.groceryList {
+  transition: all .2s ease-in-out;
+  font-size: .8em; 
+  max-width: auto;
+  margin: 0;
+  padding:0;
+}
+hr {
+  width: 60%;
+}
+.groceryList:hover {
+  transform: scale(1.1); 
+}
+.addButton, .minusButton {
+  transition: all .2s ease-in-out;
+}
+.addButton:hover, .minusButton:hover {
+transform: scale(1.12); 
 }

@@ -6,6 +6,8 @@ import Products from './Products/Products';
 import PostForm from './PostForm';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
 
 export default function App(props) {
 	const [cart, updateCart] = useState([]);
@@ -21,18 +23,22 @@ export default function App(props) {
 	return (
 		<Grid
 			container
-			direction="row"
+			direction="column"
 			justify="center"
 			alignItems="center"
-			spacing={5}
+			spacing={1}
 		>
-			<div className="pageLayoutDiv">
-				{/* <Grid item xs={6} sm={6} md={6} lg={12} xl={12}> */}
+			<Grid xs={12} md={12} lg={12} item>
 				<Header />
-				{/* </Grid> */}
-				<Product />
-				{/* <ShoppingList /> */}
-			</div>
+			</Grid>
+			<Box mt={-1}>
+				<Grid xs={12} md={12} lg={12} item>
+					<Product />
+				</Grid>
+			</Box>
+			<Grid xs={12} md={12} lg={12} item>
+				<ShoppingList />
+			</Grid>
 		</Grid>
 	);
 }
