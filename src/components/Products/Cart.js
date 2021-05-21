@@ -3,21 +3,14 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Input from '@material-ui/core/Input';
 import Typography from '@material-ui/core/Typography';
-
+import StripeCheckout from 'react-stripe-checkout';
+let total = 0;
 export default function Cart({ cart, setCart }) {
 	const getTotalSum = () => {
-		let total = cart.reduce(
-			(sum, { cost, quantity }) => sum + cost * quantity,
-			0
-		);
+		total = cart.reduce((sum, { cost, quantity }) => sum + cost * quantity, 0);
 		total = total.toFixed(2);
 		return total;
 	};
-	// const getCartTotal = () => {
-	// let total = cart.reduce((sum, { quantity }) => sum + quantity, 0);
-
-	// };
-	// };
 
 	const clearCart = () => {
 		setCart([]);
@@ -29,6 +22,10 @@ export default function Cart({ cart, setCart }) {
 	};
 	const removeFromCart = productToRemove => {
 		setCart(cart.filter(product => product !== productToRemove));
+	};
+
+	const handleToken = (token, addresses) => {
+		console.log({ token, addresses });
 	};
 
 	return (
@@ -47,6 +44,21 @@ export default function Cart({ cart, setCart }) {
 					</Grid>
 				</Grid>
 			</Box>
+			<Grid
+				container
+				direction="row"
+				justify="center"
+				alignItems="center"
+				spacing={1}
+			>
+				<StripeCheckout
+					stripeKey="pk_test_51ItJfzBuWAwTiAFxgezLtlfqPBLm16X8JrLR3NhxCbKVx0Mh6aunvh6MA1VnAcbEevH1lhAzqG2SIbQOSY4j8CW5008IBbDglz"
+					token={handleToken}
+					billingAddress
+					shippingAddress
+					amount={total * 100}
+				/>
+			</Grid>
 			<Box mt={3}>
 				<Grid
 					container
